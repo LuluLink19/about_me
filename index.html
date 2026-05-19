@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lauren Linkert | About Me</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root{
+            --purple-1: #6a3fb5;
+            --purple-2: #9b59ff;
+            --accent: #f6e8ff;
+            --bg: #fbf8ff;
+            --text: #2b2140;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: radial-gradient(circle at 10% 10%, rgba(155,89,255,0.06), transparent 15%), var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing:antialiased;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--purple-1), var(--purple-2));
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom-left-radius: 44px;
+            border-bottom-right-radius: 44px;
+            box-shadow: 0 12px 30px rgba(106,63,181,0.12);
+        }
+
+        header::before{
+            content: '';
+            position: absolute;
+            width: 300px; height: 300px;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.14), transparent 40% ), rgba(255,255,255,0.04);
+            border-radius: 50%;
+            right: -80px; top: -100px;
+            transform: rotate(22deg);
+            filter: blur(6px);
+        }
+
+        header h1 {
+            font-family: 'Poppins', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 3.0rem;
+            margin-bottom: 6px;
+            letter-spacing: 0.2px;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        header p { font-weight: 300; font-size: 1.05rem; opacity: .98; }
+
+        header .avatar{
+            width:128px;
+            height:128px;
+            border-radius:50%;
+            object-fit:cover;
+            display:block;
+            margin: 0 auto 12px;
+            border: 4px solid rgba(255,255,255,0.22);
+            box-shadow: 0 10px 26px rgba(80,50,140,0.14);
+        }
+
+        @media (max-width:420px){
+            header .avatar{ width:96px; height:96px; }
+        }
+
+        nav{
+            display:flex; justify-content:center; gap:12px; padding:18px; margin-top:-28px;
+        }
+
+        nav a{
+            color: var(--purple-1); text-decoration: none; padding:10px 14px; border-radius:999px; font-weight:600;
+            background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.18);
+            box-shadow: 0 8px 22px rgba(106,63,181,0.12);
+            transition: transform .18s ease, background .18s ease, box-shadow .18s ease, color .12s ease;
+            backdrop-filter: blur(2px);
+        }
+
+        nav a:hover{ transform: translateY(-6px); background: rgba(255,255,255,0.26); box-shadow: 0 12px 30px rgba(106,63,181,0.14); color: white; }
+
+        section{
+            background: linear-gradient(180deg, #fff, rgba(246,232,255,0.6));
+            margin: 28px auto; padding: 30px; width: 85%; border-radius: 18px; box-shadow: 0 10px 30px rgba(36,20,70,0.05);
+        }
+
+        h2{
+            margin-bottom:18px; color: var(--purple-2); padding-bottom:8px; border-bottom: 2px dashed rgba(155,89,255,0.12);
+            font-weight:600;
+        }
+
+        table{ width:100%; border-collapse: collapse; margin-top:12px; }
+        table, th, td{ border: 1px solid rgba(80,60,120,0.12); }
+        th{ background: linear-gradient(90deg,var(--purple-1),var(--purple-2)); color:white; }
+        th, td{ padding:12px; text-align:left; }
+
+        ul{ margin-left:18px; margin-top:10px; }
+
+        .project{ margin-bottom:30px; transition: transform .18s ease; border-radius:12px; }
+        .project:hover{ transform: translateY(-6px); }
+        .project h3{ color: var(--purple-1); }
+
+        .skills-container{ display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+
+        footer{ text-align:center; padding:20px; background: transparent; color: #5b3f80; margin-top:28px; }
+
+        a{ color: var(--purple-2); }
+        a:hover{ color: var(--purple-1); }
+
+        @media (max-width:700px){
+            header h1{ font-size:2.6rem; }
+            section{ width:95%; padding:20px; }
+            nav{ gap:8px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="./photo.jpg" alt="Lauren Linkert" class="avatar">
+        <h1>Lauren Linkert</h1>
+        <p>Software Engineering Student | Metropolitan State University</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#links">Links</a>
+    </nav>
+
+    <section id="about">
+        <h2>Profile Overview</h2>
+
+        <p>
+            Hi, I’m Lauren Linkert, a Software Engineering student at Metropolitan State University with interests in software development, cybersecurity, and intelligence analysis. I enjoy learning new technologies and working on projects that challenge me to think critically and solve problems creatively. Some of my favorite experiences so far have involved combining technical work with research, communication, and analytical thinking. As I continue through my program, I hope to keep building my skills and exploring different areas within the tech field.
+        </p>
+    </section>
+
+    <section id="courses">
+        <h2>Courses Taken</h2>
+
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+            </tr>
+
+            <tr>
+                <td>Data Structures</td>
+                <td>Studied algorithms, recursion, and efficient problem-solving techniques</td>
+            </tr>
+
+            <tr>
+                <td>Software Engineering</td>
+                <td>Learned software development processes, project organization, and collaboration</td>
+            </tr>
+
+            <tr>
+                <td>Database Systems</td>
+                <td>Worked with SQL, relational databases, and data management concepts</td>
+            </tr>
+
+            <tr>
+                <td>Linear Algebra</td>
+                <td>Applied mathematical concepts related to vectors, matrices, and transformations</td>
+            </tr>
+
+            <tr>
+                <td>Discrete Mathematics</td>
+                <td>Explored logic, proofs, and computational problem-solving</td>
+            </tr>
+
+            <tr>
+                <td>Computer Architecture</td>
+                <td>Studied computer hardware, memory, and low-level system operations</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+
+        <div class="skills-container">
+
+            <div>
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>Bash/Shell Scripting</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Technologies & Frameworks</h3>
+                <ul>
+                    <li>GitHub</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>AI Tools</h3>
+                <ul>
+                    <li>ChatGPT</li>
+                    <li>Claude AI</li>
+                    <li>GitHub Copilot</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>Intelligence Briefing Simulation</h3>
+
+            <p>
+                Developed an intelligence briefing focused on emerging cyber and satellite-related threats to U.S. space infrastructure. The project involved researching current threats, organizing intelligence findings, and presenting key judgments and recommendations in a professional briefing format.
+            </p>
+
+            <p>
+                <strong>Technologies/Skills Used:</strong>
+                Research, Presentation Design, Analytical Writing, AI-Assisted Research
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Bash Utility Project</h3>
+
+            <p>
+                Created a custom Bash shell utility designed to safely replace the traditional rm command by moving deleted files into a recovery directory instead of permanently deleting them. This project strengthened my experience with shell scripting, file handling, and command-line tools.
+            </p>
+
+            <p>
+                <strong>Technologies Used:</strong>
+                Bash, Linux Command Line, Shell Scripting
+            </p>
+        </div>
+
+    </section>
+
+    <section id="links">
+        <h2>Professional Links</h2>
+
+        <ul>
+            <li>
+                GitHub:
+                <a href="https://github.com/LuluLink19" target="_blank">
+                    github.com/LuluLink19
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2026 Lauren Linkert | Software Engineering Portfolio</p>
+    </footer>
+
+</body>
+</html>
